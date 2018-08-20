@@ -1,10 +1,14 @@
 version: 1.0.{build}
 configuration: Debug
+platform: x64
 image: Visual Studio 2017
 
 build:
   project: Source\HelloCpp.sln
 
+after_build:
+  - Source\x64\Debug\MyApp.exe
+
 artifacts:
-  - path: Debug
+  - path: Source\x64\Debug
     name: Executable
