@@ -1,0 +1,10 @@
+version: 1.0.{build}
+configuration: Debug
+image: Visual Studio 2017
+
+build:
+  project: Source\HelloCpp.sln
+
+artifacts:
+  - path: Debug
+    name: Executable
